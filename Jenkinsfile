@@ -2,18 +2,30 @@ pipeline {
     agent any
 
     stages {
-        stage('Stage1:Build') {
+        stage('Checkout') {
             steps {
-                echo "THis is Build Stage"
-                sh 'sleep 5'             
+                echo 'This is checkout Stage'
             }
         }
-        stage('Stage2:Push') {
+
+        stage('Build') {
+            steps {
+               echo 'This is build Stage'
+            }
+        }
+
+        stage('Push') {
             steps {
                 echo 'This is Push Stage'
-                sh 'sleep 5'
             }
         }
-        stage('Stage3:Deploy') {
+
+        stage('Deploy') {
             steps {
-                echo 'This is Deploy Stage'
+                echo 'this is deploy stage'
+            }
+        }
+
+    }
+
+}

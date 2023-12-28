@@ -17,3 +17,7 @@ pipeline {
         stage('Stage3:Deploy') {
             steps {
                 echo 'This is Deploy Stage'
+            }
+        }
+    }
+}
